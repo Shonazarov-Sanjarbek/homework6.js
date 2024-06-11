@@ -1,0 +1,79 @@
+.header{
+    width: 100%;
+    @include dfc();
+    gap: 7px;
+    &__desc{
+        background: linear-gradient(0deg, #3F3F3F, #3F3F3F), linear-gradient(180deg, rgba(211, 211, 211, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);  
+        width: 100%;
+        height: 40px;
+        @include dfc();
+    }
+    &__block{
+        width: 100%;
+        height: 100%;
+        @include df(start, center);
+    }
+    &__icon{
+        width: 35%;
+        @include df(start, center);
+        gap: 10px;
+    }
+    &__location{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $bg-light;
+        @include dfc();
+        gap: 5px;
+    }
+    &__location::after{
+        content: "";
+        width: 100%;
+        height: 0;
+        border: 1px dashed $bg-light;
+    }
+    &__title{
+        width: 65%;
+        @include df(start, center);
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            color: $bg-light;
+        }
+    }
+}
+.fa-location-dot{
+    color: $bg-light;
+}
+
+@media (max-width: 700px){
+    .header__icon{
+        width: 30%;
+    }
+}
+@media (max-width: 500px){
+    .header__icon{
+        width: 20%;
+    }
+    .hero__title{
+        width: 80%;
+        p{
+            font-size: 12px;
+        }
+    }
+}
+@media (max-width: 400px){
+    .header__icon{
+        width: 20%;
+        p{
+            font-size: 8px;
+        }
+    }
+    .hero__title{
+        width: 80%;
+        p{
+            font-size: 10px;
+        }
+    }
+}
